@@ -19,7 +19,7 @@ const Resume = () => {
     const {id} = useParams();
     const [imageUrl, setImageUrl] = useState('');
     const [resumeUrl, setResumeUrl] = useState('');
-    const [feedback, setFeedback] = useState<Feedback | null >('');
+    const [feedback, setFeedback] = useState<Feedback | null >();
     const navigate = useNavigate();
     useEffect(()=>{
         if(!isLoading && !auth.isAuthenticated) navigate(`auth?next=/resume${id}`);
